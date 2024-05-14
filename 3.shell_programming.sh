@@ -133,3 +133,22 @@ echo "directory count is $d_count"
 
 # for문 활용한 directory의 개수와 그 외(elsd)의 파일 개수 세기
 
+# 모든 프로세스 출력 (프로세스 = 프로그램0, e: 모든프로세스, f: full format)
+ps -ef
+
+# grep: 문자열 검색
+# find : 파일찾기
+# find로 특정파일 찾아서 grep으로 문자열 검색
+# ps -ef로 모든 프로세스 찾고 | grep을 통해 원하는 프로세스를 검색
+ps -ef | grep "nginx"
+
+# 마스터프로세스 죽이기
+# kill -9[PID]
+# PID : process id
+kill -9 5611(PID)
+
+# 다시 살리기
+sudo apt install nginx
+sudo systemctl start nginx
+
+find ~ | grep -rni "hello"
